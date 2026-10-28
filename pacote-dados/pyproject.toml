@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sisu-ufmg-notas-de-corte-dados"
+version = "1.0.0"
+description = "Dataset completo das notas de corte do SISU/UFMG, 2014-2026 (somente os dados, sem os scripts de análise)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [{ name = "AndreIsraelAO" }]
+keywords = ["sisu", "ufmg", "notas-de-corte", "dataset", "enem"]
+
+[project.urls]
+Repository = "https://github.com/AndreIsraelAO/sisu-ufmg-notas-de-corte"
+
+# Os CSVs ficam em ../data (fonte única) e entram no pacote na hora do build.
+[tool.hatch.build.targets.wheel]
+packages = ["src/sisu_ufmg_dados"]
+[tool.hatch.build.targets.wheel.force-include]
+"../data" = "sisu_ufmg_dados/data"
+"../docs/qualidade_dados.md" = "sisu_ufmg_dados/qualidade_dados.md"
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "README.md"]
+[tool.hatch.build.targets.sdist.force-include]
+"../data" = "src/sisu_ufmg_dados/data"
+"../docs/qualidade_dados.md" = "src/sisu_ufmg_dados/qualidade_dados.md"

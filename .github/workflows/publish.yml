@@ -1,0 +1,23 @@
+name: publish
+on:
+  push:
+    tags: ["dados-v*"]
+  workflow_dispatch:
+
+jobs:
+  pypi:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # trusted publishing, sem token
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install build
+      # sdist e wheel separados: os CSVs vêm de ../data
+      - run: python -m build --sdist && python -m build --wheel
+        working-directory: pacote-dados
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: pacote-dados/dist
