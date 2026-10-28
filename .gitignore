@@ -1,0 +1,9 @@
+# Ambientes e caches (os CSVs de data/ NÃO são ignorados)
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
