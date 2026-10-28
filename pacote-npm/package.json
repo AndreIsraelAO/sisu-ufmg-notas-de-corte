@@ -1,0 +1,13 @@
+{
+  "name": "@andreisraelao/sisu-ufmg-notas-de-corte-dados",
+  "version": "1.0.0",
+  "description": "Dataset completo das notas de corte do SISU/UFMG, 2014-2026 (somente os dados)",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreIsraelAO/sisu-ufmg-notas-de-corte.git"
+  },
+  "files": ["index.js", "data", "qualidade_dados.md"],
+  "publishConfig": { "registry": "https://npm.pkg.github.com" }
+}

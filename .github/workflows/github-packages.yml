@@ -1,0 +1,25 @@
+name: github-packages
+on:
+  push:
+    tags: ["dados-v*"]
+  workflow_dispatch:
+
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: https://npm.pkg.github.com
+      # os CSVs vêm de ../data (fonte única)
+      - run: cp -r ../data data && cp ../docs/qualidade_dados.md .
+        working-directory: pacote-npm
+      - run: npm publish
+        working-directory: pacote-npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
