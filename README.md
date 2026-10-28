@@ -1,5 +1,13 @@
 # Notas de corte do SISU/UFMG, 2014–2026: 20 análises
 
+> **Só quer os dados?** Não precisa clonar este repositório: o dataset completo (sem scripts de coleta/análise, gráficos ou posts) está no pacote [`sisu-ufmg-notas-de-corte-dados`](pacote-dados/README.md):
+>
+> ```
+> pip install sisu-ufmg-notas-de-corte-dados
+> ```
+>
+> Este repositório é para quem quer o código e as 20 análises.
+
 Análise de dados com as notas de corte da Universidade Federal de Minas Gerais no SISU, de 2014 a 2026. São 20 análises independentes, cada uma com pergunta, script, gráfico.
 
 ## Fonte dos dados
