@@ -1,6 +1,8 @@
 # Notas de corte do SISU/UFMG, 2014–2026: 20 análises
 
-> **Só quer os dados?** Não precisa clonar este repositório: o dataset completo (sem scripts de coleta/análise, gráficos ou posts) está no pacote [`sisu-ufmg-notas-de-corte-dados`](pacote-dados/README.md):
+[![PyPI](https://img.shields.io/pypi/v/sisu-ufmg-notas-de-corte-dados?label=PyPI%20dataset)](https://pypi.org/project/sisu-ufmg-notas-de-corte-dados/)
+
+> **Só quer os dados?** Não precisa clonar este repositório: o dataset completo (sem scripts de coleta/análise, gráficos ou posts) está no pacote [`sisu-ufmg-notas-de-corte-dados`](https://pypi.org/project/sisu-ufmg-notas-de-corte-dados/):
 >
 > ```
 > pip install sisu-ufmg-notas-de-corte-dados
