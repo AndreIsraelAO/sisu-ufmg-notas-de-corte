@@ -21,3 +21,4 @@ jobs:
       - uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: pacote-dados/dist
+          attestations: false   # sigstore/rekor oscila (502); opcional
